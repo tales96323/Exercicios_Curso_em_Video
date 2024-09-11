@@ -1,3 +1,4 @@
+"""Soma de dois numeros"""
 def main():
     print("Executando o exercício 3")
 # Crie um script Python que leia dois números e tente mostrar a soma entre eles

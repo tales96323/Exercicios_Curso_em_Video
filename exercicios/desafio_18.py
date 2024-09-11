@@ -1,4 +1,4 @@
-
+"""Calcula sen, cos e tang"""
 # Desafio 18: Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
 from math import sin, cos, tan, radians
 
@@ -13,5 +13,5 @@ def main():
     print("O ângulo de {} tem o cosseno de {:.2f}.".format(ang, coss))
     print("O ângulo de {} tem a tangente de {:.2f}.".format(ang, tang))
     
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
