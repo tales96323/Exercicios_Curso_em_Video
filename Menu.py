@@ -1,5 +1,5 @@
 import os
-import re
+import re   
 import importlib.util
 
 def listar_exercicios_com_primeira_linha(pasta):
