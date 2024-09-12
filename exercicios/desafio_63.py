@@ -1,3 +1,4 @@
+"""Le um n e mostra os n elementos de Fibonacci"""
 '''
 Escreva um programa que leia um número n inteiro qualquer
 e mostre na tela os primeiros n elementos e uma sequência de Fibonacci
@@ -6,37 +7,39 @@ e mostre na tela os primeiros n elementos e uma sequência de Fibonacci
 
 '''
 # Minha resolução:
+def main():
+    user = int(input("Números de termos da sequência de Fibonacci que você deseja printar: \nfn = "))
 
-user = int(input("Números de termos da sequência de Fibonacci que você deseja printar: \nfn = "))
+    prevfn = 0
+    fn = 1
+    nextfn = 0
+    index = 0
 
-prevfn = 0
-fn = 1
-nextfn = 0
-index = 0
+    while index < user:
+        prevfn = fn
+        fn = nextfn
+        nextfn = (fn + (prevfn))
+        print("f{} = {}".format(index, fn))
+        index += 1
+    print("Fim!")
 
-while index < user:
-    prevfn = fn
-    fn = nextfn
-    nextfn = (fn + (prevfn))
-    print("f{} = {}".format(index, fn))
-    index += 1
-print("Fim!")
+    '''
+    # Resolução do Gustavo Guanabara:
 
-'''
-# Resolução do Gustavo Guanabara:
+    n = int(input("Termos: \n"))
+    t1 = 0
+    t2 = 1
+    print("{} > {}".format(t1, t2), end="")
+    cont = 3
+    while cont <= n:
+        t3 = t1 + t2
+        print(" > {}".format(t3), end="")
+        t1 = t2
+        t2 = t3
+        cont += 1
+    print(" > Fim!")
+    '''
 
-n = int(input("Termos: \n"))
-t1 = 0
-t2 = 1
-print("{} > {}".format(t1, t2), end="")
-cont = 3
-while cont <= n:
-    t3 = t1 + t2
-    print(" > {}".format(t3), end="")
-    t1 = t2
-    t2 = t3
-    cont += 1
-print(" > Fim!")
-'''
-
-# Achei o meu código mais elegante que o dele.
+    # Achei o meu código mais elegante que o dele.
+if __name__ == "__main__":
+    main()
