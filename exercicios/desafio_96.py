@@ -1,18 +1,24 @@
+"""Função que calcula área"""
 """Faça um programa que tenha uma função chamada area(), que receba dimensões de um terreno retangular (largura e comprimento) e mostre a área do terreno
 """
-def cabecalho(titulo):
-    print("-" * len(titulo))
-    print(f"{titulo}")
-    print("-" * len(titulo))
+def main():
 
-cabecalho("Controle de Terrenos")
+    def cabecalho(titulo):
+        print("-" * len(titulo))
+        print(f"{titulo}")
+        print("-" * len(titulo))
 
-def area(largura, comprimento):
-    print(f"A área de um terreno '{largura}x{comprimento}' é de {largura * comprimento}m².")
+    cabecalho("Controle de Terrenos")
 
-largura = float(input("Largura (m): \n"))
-comprimento = float(input("Comprimento: \n"))
+    def area(largura, comprimento):
+        print(f"A área de um terreno '{largura}x{comprimento}' é de {largura * comprimento}m².")
+
+    largura = float(input("Largura (m): \n"))
+    comprimento = float(input("Comprimento: \n"))
 
 
 
-area(largura, comprimento)
+    area(largura, comprimento)
+
+if __name__ == "__main__":
+    main()

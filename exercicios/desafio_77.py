@@ -1,25 +1,28 @@
+"""Uma tupla com palavras e mostra as vogais dessas palavras"""
 '''
 Crie um programa que tenha uma tupla com várias palavras
 (não usar acentos).
 Depois disso, você deve mostrar, para cada palavra,
 quais são as suas vogais
 '''
+def main():
+    tupla = (
+        "Galadriel", "Luthien Tinuviel", "Erik Killmonger", 
+        "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda"
+        )
 
-tupla = (
-    "Galadriel", "Luthien Tinuviel", "Erik Killmonger", 
-    "Kendrick Lamar", "Charlotte Galves", "Roberta Pires", "Amanda"
-    )
+    vogais = ["a", "e", "i", "o", "u"]
 
-vogais = ["a", "e", "i", "o", "u"]
+    for nome in tupla:
+        nome = str(nome).lower()
+        lista = []
 
-for nome in tupla:
-    nome = str(nome).lower()
-    lista = []
+        for letra in nome:
+            for i in vogais:
+                if letra == i:
+                    lista.append(letra)
 
-    for letra in nome:
-        for i in vogais:
-            if letra == i:
-                lista.append(letra)
-
-    print(f"{nome.capitalize()}: {lista} - {len(lista)} vogais")
-    del(lista)
+        print(f"{nome.capitalize()}: {lista} - {len(lista)} vogais")
+        del(lista)
+if __name__ == "__main__":
+    main()

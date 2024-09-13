@@ -1,3 +1,4 @@
+"""cria uma lista de cadastro e fala aposentadoria"""
 """
 Crie um programa que leia nome, ano de nascimento e carteira de trabalho
 e cadastre-os (com idade) em um dicionário. 
@@ -8,26 +9,28 @@ a pessoa vai se aposentar.
 
 Obs.: aposentadoria em 35 anos de contribuição.
 """
+def main():
+    worker_infos = dict()
 
-worker_infos = dict()
+    name = input("Digite um nome: \n")
+    birthday = input("Data de nascimento: \n")
+    ctps = int(input("Número da carteira de trabalho (CTPS): \n"))
 
-name = input("Digite um nome: \n")
-birthday = input("Data de nascimento: \n")
-ctps = int(input("Número da carteira de trabalho (CTPS): \n"))
-
-retirement_age = int()
-age = int()
+    retirement_age = int()
+    age = int()
 
 
-worker_infos["name"] = name
-worker_infos["birthday"] = birthday
-worker_infos["ctps"] = ctps
+    worker_infos["name"] = name
+    worker_infos["birthday"] = birthday
+    worker_infos["ctps"] = ctps
 
-if ctps != 0:
-    hiring_date = input("Data de contratação: \n")
-    salary = int(input("Salário: \nR$ "))
-    
-    worker_infos["hiring date"] = hiring_date
-    worker_infos["salary"] = salary
+    if ctps != 0:
+        hiring_date = input("Data de contratação: \n")
+        salary = int(input("Salário: \nR$ "))
+        
+        worker_infos["hiring date"] = hiring_date
+        worker_infos["salary"] = salary
 
-print(worker_infos)
+    print(worker_infos)
+if __name__ == "__main__":
+    main()

@@ -1,3 +1,4 @@
+"""Analisa ano de nascimento e vÊ se pode votar"""
 from datetime import date
 
 """
@@ -7,17 +8,20 @@ retornando um valor literal indicando se uma pessoa tem voto
 NEGADO, OPCIONAL ou OBRIGATORIO nas eleições.
 """
 
+def main():
+    def voto(birthyear):
+        current_year = date.today().year
+        age = current_year - birthyear
+        if age < 16:
+            return f"Com {age} anos de idade: VOTO NEGADO"
+        elif age < 18 or age >= 65:
+            return f"Com {age} anos de idade: VOTO OPCIONAL"
+        elif age < 65:
+            return f"Com {age} anos de idade: VOTO OBRIGATÓRIO"
 
-def voto(birthyear):
-    current_year = date.today().year
-    age = current_year - birthyear
-    if age < 16:
-        return f"Com {age} anos de idade: VOTO NEGADO"
-    elif age < 18 or age >= 65:
-        return f"Com {age} anos de idade: VOTO OPCIONAL"
-    elif age < 65:
-        return f"Com {age} anos de idade: VOTO OBRIGATÓRIO"
 
+    ano_nasc = int(input("Em qual ano você nasceu? \n"))
+    print(voto(ano_nasc))
 
-ano_nasc = int(input("Em qual ano você nasceu? \n"))
-print(voto(ano_nasc))
+if __name__ == "__main__":
+    main()
